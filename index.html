@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="./js/app.js" defer></script>
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="weather-container">
+       
+            <div class="input">
+                <input type="text" placeholder="search...">
+                <i class="searching fa-solid fa-magnifying-glass-location"></i>
+            </div>
+    
+            <div class="weather-body">
+                <div class="current-weather__card active">
+                    <div class="geolocation">
+                        <h1 class="city-name"> City, Country </h1>
+                    </div>
+                    <div class="weather-date__information">
+                        <h1 class="date-info">
+                            Date: yy-mm-dd, hh:mm
+                        </h1>
+                    </div>
+                    <div class="weather-condition__wrapper">
+                        <div>
+                            <img width="85px" class="weather-icon" src="/images/sunny.png" alt="">
+                        </div>
+                        <div class="weather-degree">
+                            0 &deg;C
+                        </div>
+                    </div>
+                    <div class="weather-condition">
+                        Weather-Condition
+                    </div>
+    
+                    <div class="weather-informations">
+                        <div class="weather-info">
+                            <span class="humidity">Humidity: </span>
+                            <span class="precipitation">Precipitation: </span>
+                        </div>
+    
+                        <div class="weather-info">
+                            <span class="wind">Wind: </span>
+                            <span class="sunrise">Sunrise: </span>
+                        </div>
+    
+                        <div class="weather-info">
+                            <span class="pressure">Pressure: </span>
+                            <span class="sunset">Sunset: </span>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="expected-weather__card active">
+                    <div class="weather-card__title">
+                        <h3>Weather information for 4 days</h3>
+                    </div>
+                    
+                    <div class="expected-weather__informations">
+                        <div class="weather-card__subtitle">
+                            <h2>Date</h2>
+                            <h2>Temperature</h2>
+                            <h2>Description</h2>
+                            <h2>Probability of precipitation</h2>
+                        </div>
+    
+                        <div class="expected-weather__information day-2">
+                            <span class="date-1">
+                                yy-mm-dd, hh:mm:ss
+                            </span>
+                            <span class="temp-1">0 &deg;C</span>
+                            <img class="icon-1" src="" alt="">
+                            <span class="condition-1">Weather Condition</span>
+                            <span class="pop-1">0%</span>
+                        </div>
+    
+                        <div class="expected-weather__information">
+                            <span class="date-2">
+                                yy-mm-dd, hh:mm:ss
+                            </span>
+                            <span class="temp-2">0 &deg;C</span>
+                            <img class="icon-2" src="" alt="">
+                            <span class="condition-2">Weather Condition</span>
+                            <span class="pop-2">0%</span>
+                        </div>
+    
+                        <div class="expected-weather__information">
+                            <span class="date-3">
+                                yy-mm-dd, hh:mm:ss
+                            </span>
+                            <span class="temp-3">0 &deg;C</span>
+                            <img class="icon-3" src="" alt="">
+                            <span class="condition-3">Weather Condition</span>
+                            <span class="pop-3">0%</span>
+                        </div>
+    
+                        <div class="expected-weather__information">
+                            <span class="date-4">   
+                                yy-mm-dd, hh:mm:ss
+                            </span>
+                            <span class="temp-4">0&deg;C</span>
+                            <img class="icon-4" src="" alt=""> 
+                            <span class="condition-4">Weather Condition</span>
+                            <span class="pop-4">0%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+</body>
+</html>

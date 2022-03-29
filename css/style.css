@@ -1,0 +1,324 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url(/fonts/static/Montserrat-Light.ttf);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url(/fonts/static/Montserrat-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url(/fonts/static/Montserrat-Medium.ttf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url(/fonts/static/Montserrat-Bold.ttf);
+    font-weight: 700;
+}
+
+body {
+    background: url("../images/nature.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    position: relative;
+}
+
+video {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -9;
+}
+
+.weather-container {
+    width: 1154px;
+    margin: 0 auto;
+    z-index: 9999;
+}
+
+.input {
+   text-align: center;
+   padding-top: 50px;
+   position: relative;
+   
+}
+
+input {
+    padding: 10px;
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #000;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 400px;
+    background: rgb(255, 255, 255, .7);
+}
+
+.searching {
+    position: absolute;
+    cursor: pointer;
+    top: 60px;
+    left: 740px;
+    font-size: 22px;
+    color: red;
+}
+
+.searching:hover {
+    font-size: 24px;
+    transition: all .5s;
+}
+
+.searching:active {
+    font-size: 27px;
+    color: blue;
+}
+
+.weather-body {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 100px;
+}
+
+.weather-body > div {
+    width: 560px;
+    background: rgb(176,255,75,);
+    background: linear-gradient(-45deg, rgba(176,255,75,.6) 0%, rgba(73,255,228,.6) 50%, rgba(11,119,246,.6) 100%);
+    padding: 20px;
+    border-radius: 12px;
+    transition: all .5s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.current-weather__card:hover,
+.expected-weather__card:hover {
+    transform: scale(1.03);
+}
+
+.geolocation h1 {
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-size: 32px;
+}
+
+.weather-date__information h1 {
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.weather-degree {
+    font-family: "Montserrat, serif";
+    font-weight: 700;
+    font-size: 46px;
+}
+
+.weather-condition {
+    margin-top: 0px;
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.weather-informations {
+    border-top: 1px solid #000;
+    margin-top: 20px;
+}
+
+.weather-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.weather-info span {
+    margin-top: 20px;
+    font-family: "Montserrat";
+    font-weight: 400;
+}
+
+.weather-condition__wrapper {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-top: 30px;
+}
+
+/* EXPECTED WEATHER CARD */
+
+.weather-card__title h3 {
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.expected-weather__informations > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.weather-card__subtitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.weather-card__subtitle h2 {
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: 14px;
+    width: 100px;
+}
+
+.expected-weather__information {
+    padding-bottom: 5px;
+    border-bottom: 1px solid #000;
+    
+}
+
+.expected-weather__information span {
+    margin-top: 20px;
+    width: 120px;
+    text-align: center;
+}
+
+.expected-weather__information {
+    position: relative;
+}
+
+.date-1, .date-2, .date-3, .date-4 {
+    font-family: "Montserrat";
+    font-weight: 700;
+    line-height: 21px;
+}
+
+.icon-1, .icon-2, .icon-3, .icon-4 {
+    position: absolute;
+    width: 40px;
+    top: 0px;
+    left: 305px;
+}
+
+
+.weather-body {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.weather-body.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+@media only screen and (max-width: 769px) {
+    .weather-container {
+        width: 100%;
+    }
+
+    .weather-body {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .searching {
+        left: 550px;
+    }
+
+    .expected-weather__card {
+        margin: 50px 0;
+    }
+}
+
+@media only screen and (max-width: 544px){
+    .weather-body>div {
+        width: 90%;
+    }
+
+    .searching {
+        left: 440px;
+    }
+
+    .icon-1,.icon-2,.icon-3,.icon-4 {
+        left: 260px;
+    }
+}
+
+@media only screen and (max-width: 415px) {
+    .weather-body>div {
+        width: 90%;
+    }
+
+    .weather-info span {
+        font-size: 14px;
+    }
+
+    input {
+        width: 90%;
+    }
+
+    .searching {
+        left: 360px;
+    }
+
+    .icon-1,.icon-2,.icon-3,.icon-4 {
+        left: 190px;
+    }
+}
+
+@media only screen and (max-width: 394px) {
+    .weather-body> div {
+        width: 370px;
+    }
+
+    .searching {
+        left: 340px;
+    }
+
+    .icon-1,.icon-2,.icon-3,.icon-4 {
+        left: 180px;
+    }
+}
+
+@media only screen and (max-width: 376px) {
+    .weather-body >div {
+        width: 360px;
+    }
+
+    .searching {
+        left: 325px;
+    }
+}
+
+@media only screen and (max-width: 365px) {
+    .searching {
+        left: 310px;
+    }
+}
